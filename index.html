@@ -654,8 +654,8 @@ html.pdf .ui,.pdf .ui{display:none!important}
 <svg id="cables" aria-hidden="true"></svg>
 
 <!-- ═════════════ 01 · Capa ═════════════ -->
-<section class="slide lt capa" id="s1" data-sec="Abertura" data-who="Pedro" data-title="Entre Consultas"
- data-notes="Pedro abre: apresenta os cinco integrantes e o nome do sistema. Uma frase: acompanhar o tratamento da depressão no posto de saúde entre uma consulta e outra. Divisão do tempo: 3 min por integrante, cada um com um divisor e dois slides de conteúdo (Pedro: sistema; Vinicius: motivação; Vitor: histórias e casos de uso; Raphael: protótipo; Ruan: conclusões). Sobram cerca de 30 s para abertura e perguntas. Total de 18 slides.">
+<section class="slide lt capa" id="s1" data-sec="Abertura" data-who="Vitor" data-title="Entre Consultas"
+ data-notes="Vitor abre: apresenta os cinco integrantes e o nome do sistema. Uma frase: acompanhar o tratamento da depressão no posto de saúde entre uma consulta e outra. Divisão do tempo: 3 min por integrante, cada um com um divisor e dois slides de conteúdo (Vitor: sistema; Vinicius: motivação; Raphael: histórias e casos de uso; Pedro: protótipo; Ruan: conclusões). Sobram cerca de 30 s para abertura e perguntas. Total de 18 slides.">
   <h1 class="giant" data-split="Entre|Consultas"></h1>
   <p class="sub a" style="--i:2"><b>Cuidado desde o primeiro contato.</b> Acompanhamento da depressão no posto de saúde do SUS, entre uma consulta e outra.</p>
   <div class="acts a" style="--i:4"><a class="btn" href="#13" data-goto="13">Ver o protótipo <span><svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></span></a></div>
@@ -677,28 +677,28 @@ html.pdf .ui,.pdf .ui{display:none!important}
 </section>
 
 <!-- ═════════════ 02 · Divisor 01 ═════════════ -->
-<section class="slide dk div" id="s2" data-sec="Parte 01" data-who="Pedro" data-title="O sistema"
+<section class="slide dk div" id="s2" data-sec="Parte 01" data-who="Vitor" data-title="O sistema"
  data-cable="M-140 300 C 400 260, 700 560, 1000 760 S 1700 1100, 2080 900"
  data-notes="Transição: primeiro o que o sistema é, quem usa e de onde vêm as regras.">
   <span class="num a fd" aria-hidden="true">01</span>
   <p class="part a"><span class="bar"><i class="on"></i><i></i><i></i><i></i><i></i></span>Parte 01 de 05</p>
   <h1 data-split="O sistema"></h1>
   <p class="sub a" style="--i:3">Visão geral, arquitetura e regras de negócio</p>
-  <p class="who a" style="--i:5"><b>P</b>Pedro <small>apresenta</small></p>
+  <p class="who a" style="--i:5"><b>V</b>Vitor <small>apresenta</small></p>
 </section>
 
 <!-- ═════════════ 03 · Visão geral e arquitetura ═════════════ -->
-<section class="slide lt" id="s3" data-sec="Descritivo" data-who="Pedro" data-title="Visão geral e arquitetura"
- data-notes="Visão geral (doc 1.1 e 1.3): um site que funciona no celular e no computador, para acompanhar o tratamento de depressão de quem é atendido na unidade básica. Três perfis: paciente, profissional da unidade e psiquiatra, todos com a conta gov.br. De tempos em tempos o paciente responde ao PHQ-9 (Patient Health Questionnaire-9, nove perguntas sobre sintomas) e a perguntas sobre o que está pesando: trabalho, família, dinheiro. Não substitui o prontuário e deixa de fora agendamento, teleconsulta e receita. Arquitetura (doc 1.4 e 1.5): cliente-servidor em camadas, porque três tipos de usuário acessam os mesmos dados de aparelhos diferentes e as regras precisam ficar num lugar só. Apresentação em duas frentes: site em React como PWA, que abre no navegador sem instalar e usa uma biblioteca de gráficos para o PHQ-9, e app mobile em Flutter; os dois consomem a mesma API; Java com Spring Boot oferecendo uma API REST; PostgreSQL porque os dados são relacionados entre si. Integrações: e-SUS APS lê o cadastro individual (nome, celular, escolaridade, trabalho, grupo comunitário), imitado no protótipo; WhatsApp pela API oficial manda o lembrete e conduz o questionário, reconhecendo o paciente pelo número.">
+<section class="slide lt" id="s3" data-sec="Descritivo" data-who="Vitor" data-title="Visão geral e arquitetura"
+ data-notes="Visão geral (doc 1.1 e 1.3): um site que funciona no celular e no computador, para acompanhar o tratamento de depressão de quem é atendido na unidade básica. Três perfis: paciente, profissional da unidade e psiquiatra, todos com a conta gov.br. De tempos em tempos o paciente responde ao PHQ-9 (Patient Health Questionnaire-9, nove perguntas sobre sintomas) e a perguntas sobre o que está pesando: trabalho, família, dinheiro. Não substitui o prontuário e deixa de fora agendamento, teleconsulta e receita. Arquitetura (doc 1.4 e 1.5): cliente-servidor em camadas, porque três tipos de usuário acessam os mesmos dados de aparelhos diferentes e as regras precisam ficar num lugar só. React como PWA, que abre no navegador sem instalar e usa uma biblioteca de gráficos para o PHQ-9; Java com Spring Boot oferecendo uma API REST; PostgreSQL porque os dados são relacionados entre si. Integrações: e-SUS APS lê o cadastro individual (nome, celular, escolaridade, trabalho, grupo comunitário), imitado no protótipo; WhatsApp pela API oficial manda o lembrete e conduz o questionário, reconhecendo o paciente pelo número.">
   <div class="vg">
     <p class="kick a">Visão geral</p>
-    <h1 class="title" data-split="Web e app para o|intervalo entre|consultas"></h1>
+    <h1 class="title" data-split="Um site para o|intervalo entre|consultas"></h1>
     <p class="lead a" style="--i:2">Acompanha a depressão de quem é atendido no posto. Três perfis, todos com a conta gov.br. <b>Não substitui o prontuário.</b></p>
     <p class="who3 a" style="--i:3"><span><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg>Paciente</span><span><svg class="ic" aria-hidden="true"><use href="#i-users"/></svg>Equipe do posto</span><span><svg class="ic" aria-hidden="true"><use href="#i-doc"/></svg>Psiquiatra</span></p>
   </div>
   <div class="arq card a fr" style="--i:3">
     <p class="ah">Arquitetura cliente-servidor em camadas</p>
-    <div class="ly"><span class="well hot"><svg class="ic" aria-hidden="true"><use href="#i-layout"/></svg></span><div><small>Apresentação</small><h2>React (web) + Flutter (mobile)</h2><p>Site como PWA, sem instalar, e app para celular</p></div></div>
+    <div class="ly"><span class="well hot"><svg class="ic" aria-hidden="true"><use href="#i-layout"/></svg></span><div><small>Apresentação</small><h2>React, como PWA</h2><p>Um site para celular e computador, sem instalar</p></div></div>
     <span class="ar" aria-hidden="true"></span>
     <div class="ly"><span class="well"><svg class="ic" aria-hidden="true"><use href="#i-server"/></svg></span><div><small>Negócio</small><h2>Java + Spring Boot</h2><p>API REST com as regras e o login pelo gov.br</p></div></div>
     <span class="ar" aria-hidden="true"></span>
@@ -708,7 +708,7 @@ html.pdf .ui,.pdf .ui{display:none!important}
 </section>
 
 <!-- ═════════════ 04 · Regras de negócio ═════════════ -->
-<section class="slide lt" id="s4" data-sec="Regras de negócio" data-who="Pedro" data-title="Regras que vêm da Linha de Cuidado"
+<section class="slide lt" id="s4" data-sec="Regras de negócio" data-who="Vitor" data-title="Regras que vêm da Linha de Cuidado"
  data-notes="São 11 regras, vindas da Linha de Cuidado da Depressão no Adulto (Ministério da Saúde) e de quem usa o sistema. Explicar as três de cima; as oito de baixo, só apontar. R.N. 001: vale em qualquer canal; no WhatsApp o aviso chega logo depois da pergunta; o destaque fica até a próxima resposta; o sistema não acompanha em tempo real. R.N. 003: quem decide é sempre o profissional. R.N. 004: nunca menos de 14 dias, porque o PHQ-9 pergunta sobre as últimas 2 semanas. R.N. 007: faixas 0–4 mínima, 5–9 leve, 10–14 moderada, 15–19 moderadamente grave, 20–27 grave; resposta ao tratamento a partir de 4 semanas. R.N. 008: ordem Risco, Piorou, Sem resposta (7 dias após a data prevista), Sugere encaminhamento, Em dia. R.N. 011: a consulta com o especialista é marcada pela regulação, fora do sistema. Passa para o Vinicius.">
   <div class="hd"><p class="kick a">Regras de negócio</p><h1 class="title" data-split="Regras que vêm da|Linha de Cuidado"></h1></div>
   <div class="bd g3" style="top:400px">
@@ -754,7 +754,7 @@ html.pdf .ui,.pdf .ui{display:none!important}
 
 <!-- ═════════════ 10 · Sistemas semelhantes ═════════════ -->
 <section class="slide lt" id="s10" data-sec="Sistemas semelhantes" data-who="Vinicius" data-title="Ninguém cobre o intervalo dentro do SUS"
- data-notes="Começar pela lacuna: hoje a equipe só sabe como o paciente está quando ele volta à consulta; se piora ou desiste, ninguém fica sabendo a tempo, e o psiquiatra recebe o caso sem histórico. e-SUS APS: o prontuário que o posto já usa; no manual e nas notas das versões 5.3 a 5.6 não encontramos questionário de depressão nem resposta fora da consulta. Meu SUS Digital: app do cidadão; desde julho de 2026 leva ao Pode Falar (escuta para jovens de 13 a 24 anos), uma conversa pontual que não mede sintomas nem avisa a equipe. NeuroFlow: a ideia mais parecida, mas paga e feita para planos e hospitais dos EUA. Passa para o Vitor.">
+ data-notes="Começar pela lacuna: hoje a equipe só sabe como o paciente está quando ele volta à consulta; se piora ou desiste, ninguém fica sabendo a tempo, e o psiquiatra recebe o caso sem histórico. e-SUS APS: o prontuário que o posto já usa; no manual e nas notas das versões 5.3 a 5.6 não encontramos questionário de depressão nem resposta fora da consulta. Meu SUS Digital: app do cidadão; desde julho de 2026 leva ao Pode Falar (escuta para jovens de 13 a 24 anos), uma conversa pontual que não mede sintomas nem avisa a equipe. NeuroFlow: a ideia mais parecida, mas paga e feita para planos e hospitais dos EUA. Passa para o Raphael.">
   <div class="hd"><p class="kick a">Sistemas semelhantes</p><h1 class="title" data-split="Ninguém cobre o intervalo|dentro do SUS"></h1></div>
   <div class="bd tbl cmp" style="top:420px">
     <div class="tr th a" style="--i:1"><span></span><span>e-SUS APS</span><span>Meu SUS Digital</span><span>NeuroFlow</span><span class="us"><span class="dot p"></span>Entre Consultas</span></div>
@@ -766,18 +766,18 @@ html.pdf .ui,.pdf .ui{display:none!important}
 </section>
 
 <!-- ═════════════ 11 · Divisor 03 ═════════════ -->
-<section class="slide dk div" id="s11" data-sec="Parte 03" data-who="Vitor" data-title="Histórias e casos de uso"
+<section class="slide dk div" id="s11" data-sec="Parte 03" data-who="Raphael" data-title="Histórias e casos de uso"
  data-cable="M-140 300 C 400 260, 700 560, 1000 760 S 1700 1100, 2080 900"
  data-notes="Transição: do ponto de vista de quem usa.">
   <span class="num a fd" aria-hidden="true">03</span>
   <p class="part a"><span class="bar"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span>Parte 03 de 05</p>
   <h1 data-split="Histórias e|casos de uso"></h1>
   <p class="sub a" style="--i:3">O que cada perfil quer fazer, e como isso vira o diagrama</p>
-  <p class="who a" style="--i:5"><b>V</b>Vitor <small>apresenta</small></p>
+  <p class="who a" style="--i:5"><b>R</b>Raphael <small>apresenta</small></p>
 </section>
 
 <!-- ═════════════ 12 · Histórias de usuário ═════════════ -->
-<section class="slide lt" id="s12" data-sec="Histórias de usuário" data-who="Vitor" data-title="Nove histórias de usuário"
+<section class="slide lt" id="s12" data-sec="Histórias de usuário" data-who="Raphael" data-title="Nove histórias de usuário"
  data-notes="São 9 histórias no padrão papel, objetivo e benefício; a tabela completa está na documentação. Ler uma inteira como exemplo, a H.U. 003: Eu, como profissional da unidade, gostaria de ver primeiro quem pensou em se ferir, piorou ou parou de responder, para que eu faça a busca ativa antes que o paciente abandone o tratamento. Dessa forma, menos pacientes ficam sem cuidado entre as consultas. Depois apontar que cada história tem uma tela no protótipo: 001 e 002 do paciente, 003 a 006, 008 e 009 da unidade, 007 do psiquiatra.">
   <div class="hd sm"><p class="kick a">Histórias de usuário</p><h1 class="title" data-split="Nove histórias, três papéis"></h1></div>
   <div class="bd g3 hu" style="top:320px">
@@ -794,8 +794,8 @@ html.pdf .ui,.pdf .ui{display:none!important}
 </section>
 
 <!-- ═════════════ 13 · Casos de uso ═════════════ -->
-<section class="slide lt" id="s13" data-sec="Casos de uso" data-who="Vitor" data-title="Diagrama de casos de uso"
- data-notes="Diagrama de casos de uso (Figura 21 da documentação). Atores: Paciente e Profissional de saúde herdam de Usuário (que tem Autenticar); Profissional da unidade e Psiquiatra herdam de Profissional de saúde (que tem Ver evolução do paciente). Inclusões: Abrir acompanhamento inclui Definir periodicidade; Encaminhar ao especialista inclui Gerar resumo do histórico. Extensão: Alertar risco estende Responder questionário quando a pergunta 9 é diferente de 'nenhuma vez' (R.N. 001). Generalização de casos de uso: Responder questionário por WhatsApp ou site; Transferir paciente o acompanhamento ou o encaminhamento. Passa para o Raphael.">
+<section class="slide lt" id="s13" data-sec="Casos de uso" data-who="Raphael" data-title="Diagrama de casos de uso"
+ data-notes="Diagrama de casos de uso (Figura 21 da documentação). Atores: Paciente e Profissional de saúde herdam de Usuário (que tem Autenticar); Profissional da unidade e Psiquiatra herdam de Profissional de saúde (que tem Ver evolução do paciente). Inclusões: Abrir acompanhamento inclui Definir periodicidade; Encaminhar ao especialista inclui Gerar resumo do histórico. Extensão: Alertar risco estende Responder questionário quando a pergunta 9 é diferente de 'nenhuma vez' (R.N. 001). Generalização de casos de uso: Responder questionário por WhatsApp ou site; Transferir paciente o acompanhamento ou o encaminhamento. Passa para o Pedro.">
   <div class="dcl">
     <p class="kick a">Diagrama de casos de uso</p>
     <h1 class="title" data-split="Herança nos atores|e nos casos de uso"></h1>
@@ -810,18 +810,18 @@ html.pdf .ui,.pdf .ui{display:none!important}
 </section>
 
 <!-- ═════════════ 14 · Divisor 04 ═════════════ -->
-<section class="slide dk div" id="s14" data-sec="Parte 04" data-who="Raphael" data-title="Protótipos"
+<section class="slide dk div" id="s14" data-sec="Parte 04" data-who="Pedro" data-title="Protótipos"
  data-cable="M2080 260 C 1600 300, 1300 600, 1000 820 S 300 1100, -140 960"
  data-notes="Transição: o protótipo navegável, perfil por perfil.">
   <span class="num a fd" aria-hidden="true">04</span>
   <p class="part a"><span class="bar"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span>Parte 04 de 05</p>
   <h1 data-split="Protótipos"></h1>
   <p class="sub a" style="--i:3">Os requisitos no protótipo, e o protótipo ao vivo</p>
-  <p class="who a" style="--i:5"><b>R</b>Raphael <small>apresenta</small></p>
+  <p class="who a" style="--i:5"><b>P</b>Pedro <small>apresenta</small></p>
 </section>
 
 <!-- ═════════════ 12 · Requisitos no protótipo ═════════════ -->
-<section class="slide lt" id="srf" data-sec="Protótipos" data-who="Raphael" data-title="Os 12 requisitos no protótipo"
+<section class="slide lt" id="srf" data-sec="Protótipos" data-who="Pedro" data-title="Os 12 requisitos no protótipo"
  data-notes="Cada requisito funcional tem pelo menos uma tela no protótipo; as 20 telas estão na documentação (Figuras 1 a 20), com o nome do R.F. como título. Login pela conta gov.br para todos; no WhatsApp o paciente é reconhecido pelo número. No próximo slide, o protótipo ao vivo.">
   <div class="hd"><p class="kick a">Protótipos</p><h1 class="title" data-split="Os 12 requisitos,|tela a tela"></h1></div>
   <p class="auth a" style="--i:2"><b>R.F. 001</b>Autenticar com a conta gov.br, para os três perfis</p>
@@ -833,7 +833,7 @@ html.pdf .ui,.pdf .ui{display:none!important}
 </section>
 
 <!-- ═════════════ 13 · Protótipo ao vivo ═════════════ -->
-<section class="slide lt" id="slive" data-sec="Protótipo ao vivo" data-who="Raphael" data-title="Protótipo ao vivo"
+<section class="slide lt" id="slive" data-sec="Protótipo ao vivo" data-who="Pedro" data-title="Protótipo ao vivo"
  data-notes="O protótipo roda dentro do slide: clique na tela para navegar. Para voltar a usar as setas da apresentação, clique fora do quadro. Na tela de login, o botão do gov.br abre o menu de visões da demonstração. Roteiro (cerca de 2 min): 1) Ana responde no WhatsApp e marca 'vários dias' na pergunta 9, aparece o CVV (R.F. 002, R.N. 001); 2) Juliana, na equipe, vê Ana no topo com o destaque Risco (R.F. 006, 007); 3) Carlos tem sugestão de encaminhamento e Juliana encaminha com o resumo (R.F. 008); 4) Dr. Marcos abre o resumo e responde à unidade com conduta e medicação (R.F. 009, 012). Se a rede falhar, use o botão 'abrir em nova aba' ou as figuras da documentação. Passa para o Ruan.">
   <div class="lv">
     <p class="kick a">Protótipo ao vivo</p>
