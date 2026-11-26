@@ -10,6 +10,10 @@ Protótipo: [entre-consultas-sigma.vercel.app](https://entre-consultas-sigma.ver
 
 É um site estático, sem build: abra o `index.html` no navegador ou publique a raiz do repositório na Vercel (ou no GitHub Pages).
 
+## Protótipo ao vivo
+
+O slide 13 abre o protótipo dentro da apresentação. Clique no quadro para navegar e clique fora dele para voltar a usar as setas. No PDF, esse slide mostra um print no lugar do site.
+
 ## Atalhos
 
 | Tecla | O que faz |
@@ -28,4 +32,4 @@ Para gerar o PDF sem abrir o navegador: abra `index.html?pdf` e imprima, ou use 
 ## Estrutura
 
 - `index.html`: todos os slides, o estilo e o motor da apresentação.
-- `img/`: prints do protótipo e o diagrama de casos de uso.
+- `img/`: diagrama de casos de uso e o print usado no PDF.

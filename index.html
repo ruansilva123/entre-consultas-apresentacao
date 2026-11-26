@@ -377,9 +377,9 @@ body.ov .frame.cur{box-shadow:0 0 0 10px var(--ink)}
 #s1 .leg span{display:flex;align-items:center;gap:10px}
 
 /* regras */
-#s4 .rn{padding:40px 40px 44px;min-height:400px}
-#s4 .rn h2{margin-top:30px;font:600 40px/1.15 var(--sans);letter-spacing:-.02em}
-#s4 .rn p{margin-top:18px;font:400 27px/1.4 var(--sans);color:var(--mut)}
+#s4 .rn{padding:32px 36px 36px;min-height:290px}
+#s4 .rn h2{margin-top:22px;font:600 36px/1.15 var(--sans);letter-spacing:-.02em}
+#s4 .rn p{margin-top:12px;font:400 25px/1.4 var(--sans);color:var(--mut)}
 
 /* arquitetura */
 #s5 .layer{position:absolute;top:380px;width:500px;height:280px;padding:32px 36px}
@@ -440,6 +440,67 @@ body.ov .frame.cur{box-shadow:0 0 0 10px var(--ink)}
 #s4b .rr h2{margin-top:22px;font:600 32px/1.15 var(--sans);letter-spacing:-.02em}
 #s4b .rr p{margin-top:10px;font:400 24px/1.38 var(--sans);color:var(--mut)}
 .tag.dk{background:var(--night)}
+
+.g4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:28px;align-items:stretch}
+/* regras: faixa das outras oito */
+#s4 .chips{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px 20px}
+#s4 .chip{display:flex;align-items:center;gap:14px;padding:18px 22px;border-radius:18px;background:var(--w);box-shadow:0 0 0 1.5px var(--line);font:400 22px/1.3 var(--sans);color:var(--ink-2)}
+#s4 .chip b{flex:none;font:600 20px var(--mono);color:var(--p-txt);background:var(--p-soft);padding:6px 10px;border-radius:10px}
+/* números */
+#s7 .stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:28px;align-items:stretch}
+#s7 .stats>div{padding:40px 36px 42px;min-height:370px}
+#s7 .stats .n{font:600 104px/1 var(--sans);letter-spacing:-.05em}
+#s7 .stats .l{margin-top:26px;font:400 27px/1.38 var(--sans)}
+#s7 .stats .card .l{color:var(--mut)}
+#s7 .src{top:860px}
+/* requisitos no protótipo */
+#srf .auth{position:absolute;left:120px;top:388px;display:flex;align-items:center;gap:16px;font:400 27px var(--sans);color:var(--ink-2)}
+#srf .auth b,#srf .rf li b{flex:none;font:600 21px var(--mono);color:var(--p-txt);background:var(--p-soft);padding:6px 10px;border-radius:10px}
+#srf .rf{align-items:stretch}
+#srf .rf>div{padding:30px 34px 34px}
+#srf .rh{display:flex;align-items:center;gap:18px;margin-bottom:22px}
+#srf .rh h2{font:600 32px var(--sans);letter-spacing:-.02em}
+#srf .rf ul{list-style:none;display:flex;flex-direction:column;gap:14px}
+#srf .rf li{display:flex;align-items:center;gap:14px;font:400 24px/1.25 var(--sans);color:var(--ink-2)}
+/* protótipo ao vivo */
+#slive .lv{position:absolute;left:120px;top:150px;width:380px}
+#slive .lv .title{font-size:62px}
+#slive .rt{list-style:none;margin-top:40px;display:flex;flex-direction:column;gap:18px}
+#slive .rt li{display:flex;gap:14px;align-items:baseline;font:500 24px/1.3 var(--sans);color:var(--ink-2)}
+#slive .rt b{flex:none;font:600 20px var(--mono);color:var(--p-txt)}
+#slive .hint{margin-top:36px;font:400 21px/1.4 var(--sans);color:var(--mut)}
+#slive .live{position:absolute;left:540px;top:120px;width:1280px;height:820px;padding:0;overflow:hidden;background:var(--w)}
+#slive .bar{height:52px;display:flex;align-items:center;gap:18px;padding:0 20px;background:var(--paper);border-bottom:1.5px solid var(--line);font:400 19px var(--mono);color:var(--mut)}
+#slive .dots{display:flex;gap:8px}
+#slive .dots i{width:12px;height:12px;border-radius:50%;background:var(--wire)}
+#slive .url{flex:1}
+#slive .bar a{font:500 19px var(--sans);color:var(--p-txt);text-decoration:none}
+#slive .vp{position:relative;width:1280px;height:768px;overflow:hidden}
+#slive .vp iframe{position:absolute;left:0;top:0;width:1440px;height:864px;border:0;transform:scale(.88889);transform-origin:0 0;background:var(--w)}
+#slive .vp .fallback{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top left;display:none}
+html.pdf #slive .vp iframe{display:none}
+html.pdf #slive .vp .fallback{display:block}
+html.pdf #slive .hint{display:none}
+/* conclusões */
+#s22 .cc{align-items:stretch}
+#s22 .cc>div{padding:40px 44px 44px}
+#s22 .cc h2{margin:24px 0 20px;font:600 40px var(--sans);letter-spacing:-.02em}
+#s22 .cc ul{list-style:none;display:flex;flex-direction:column;gap:16px}
+#s22 .cc li{position:relative;padding-left:30px;font:400 28px/1.35 var(--sans);color:var(--ink-2)}
+#s22 .cc li::before{content:"";position:absolute;left:2px;top:15px;width:11px;height:11px;border-radius:50%;background:var(--p)}
+#s22b .fut>div{padding:34px 34px 38px;min-height:270px}
+#s22b .fut .n{font:600 22px var(--mono);color:var(--p-txt)}
+#s22b .fut h2{margin-top:22px;font:600 34px/1.15 var(--sans);letter-spacing:-.02em}
+#s22b .fut p{margin-top:12px;font:400 25px/1.4 var(--sans);color:var(--mut)}
+#s22b .close{position:absolute;left:120px;right:120px;top:750px;padding:34px 44px}
+#s22b .close p{font:400 32px/1.35 var(--sans);color:var(--on-dark)}
+#s22b .close b{color:var(--p-2);font-weight:600}
+#s7 .stats{align-items:start}
+#s7 .stats>div{min-height:330px;height:auto}
+#s7 .src{top:880px}
+#s22b .fut{top:400px!important;align-items:start}
+#s22b .fut>div{min-height:240px}
+#s22b .close{top:740px}
 
 
 /* ═════════════ Interface do apresentador ═════════════ */
@@ -564,10 +625,10 @@ html.pdf .ui,.pdf .ui{display:none!important}
 
 <!-- ═════════════ 01 · Capa ═════════════ -->
 <section class="slide lt capa" id="s1" data-sec="Abertura" data-who="Pedro" data-title="Entre Consultas"
- data-notes="Pedro abre: apresenta os cinco integrantes e o nome do sistema. Uma frase: acompanhar o tratamento da depressão no posto de saúde entre uma consulta e outra. Divisão do tempo (ajustar): Pedro 3 min (sistema), Vinicius 3 min (motivação), Vitor 2,5 min (histórias e casos de uso), Raphael 4 min (protótipos), Ruan 2,5 min (conclusões). São 27 slides: os divisores passam em poucos segundos.">
+ data-notes="Pedro abre: apresenta os cinco integrantes e o nome do sistema. Uma frase: acompanhar o tratamento da depressão no posto de saúde entre uma consulta e outra. Divisão do tempo: 3 min por integrante, cada um com um divisor e dois slides de conteúdo (Pedro: sistema; Vinicius: motivação; Vitor: histórias e casos de uso; Raphael: protótipo; Ruan: conclusões). Sobram cerca de 30 s para abertura e perguntas. Total de 18 slides.">
   <h1 class="giant" data-split="Entre|Consultas"></h1>
   <p class="sub a" style="--i:2"><b>Cuidado desde o primeiro contato.</b> Acompanhamento da depressão no posto de saúde do SUS, entre uma consulta e outra.</p>
-  <div class="acts a" style="--i:4"><a class="btn" href="#16" data-goto="16">Ver o protótipo <span><svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></span></a></div>
+  <div class="acts a" style="--i:4"><a class="btn" href="#13" data-goto="13">Ver o protótipo <span><svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></span></a></div>
   <p class="names a" style="--i:5">Pedro Henrique Urio dos Santos · Raphael Soares de Almeida · Ruan Carlos da Silva · Vinicius Antonio Jaeger · Vitor Rafael Marcelino</p>
   <div class="stage card a fr" style="--i:3;padding:40px 44px 36px">
     <h2>O que a equipe passa a enxergar</h2>
@@ -592,7 +653,7 @@ html.pdf .ui,.pdf .ui{display:none!important}
   <span class="num a fd" aria-hidden="true">01</span>
   <p class="part a"><span class="bar"><i class="on"></i><i></i><i></i><i></i><i></i></span>Parte 01 de 05</p>
   <h1 data-split="O sistema"></h1>
-  <p class="sub a" style="--i:3">Visão geral, regras de negócio e arquitetura</p>
+  <p class="sub a" style="--i:3">Visão geral e regras de negócio</p>
   <p class="who a" style="--i:5"><b>P</b>Pedro <small>apresenta</small></p>
 </section>
 
@@ -615,46 +676,23 @@ html.pdf .ui,.pdf .ui{display:none!important}
 
 <!-- ═════════════ 04 · Regras de negócio ═════════════ -->
 <section class="slide lt" id="s4" data-sec="Regras de negócio" data-who="Pedro" data-title="Regras que vêm da Linha de Cuidado"
- data-notes="São 11 regras, vindas da Linha de Cuidado da Depressão no Adulto (Ministério da Saúde) e de quem usa o sistema. Estas três são as que mais mudam o sistema. R.N. 001: vale em qualquer canal; no WhatsApp o aviso chega logo depois da pergunta; o destaque de Risco fica até a próxima resposta; o sistema não acompanha em tempo real. R.N. 003: quem decide é sempre o profissional.">
+ data-notes="São 11 regras, vindas da Linha de Cuidado da Depressão no Adulto (Ministério da Saúde) e de quem usa o sistema. Explicar as três de cima; as oito de baixo, só apontar. R.N. 001: vale em qualquer canal; no WhatsApp o aviso chega logo depois da pergunta; o destaque fica até a próxima resposta; o sistema não acompanha em tempo real. R.N. 003: quem decide é sempre o profissional. R.N. 004: nunca menos de 14 dias, porque o PHQ-9 pergunta sobre as últimas 2 semanas. R.N. 007: faixas 0–4 mínima, 5–9 leve, 10–14 moderada, 15–19 moderadamente grave, 20–27 grave; resposta ao tratamento a partir de 4 semanas. R.N. 008: ordem Risco, Piorou, Sem resposta (7 dias após a data prevista), Sugere encaminhamento, Em dia. R.N. 011: a consulta com o especialista é marcada pela regulação, fora do sistema. Passa para o Vinicius.">
   <div class="hd"><p class="kick a">Regras de negócio</p><h1 class="title" data-split="Regras que vêm da|Linha de Cuidado"></h1></div>
-  <div class="bd g3" style="top:430px">
-    <div class="rn card a" style="--i:2"><span class="tag risk">R.N. 001 · Segurança</span><h2>Pensou em se ferir: CVV 188</h2><p>Na pergunta 9, qualquer resposta diferente de “nenhuma vez” mostra o CVV e marca o paciente como Risco.</p></div>
-    <div class="rn card a" style="--i:3"><span class="tag">R.N. 002 · Rastreio</span><h2>PHQ-9 de 9 ou mais é sinal de depressão</h2><p>Ponto de corte definido pela linha de cuidado.</p></div>
-    <div class="rn card a" style="--i:4"><span class="tag s">R.N. 003 · Encaminhamento</span><h2>O sistema sugere, o profissional decide</h2><p>Após 16 semanas sem queda de 5 pontos, ou com pensamentos de se ferir ao longo de 12 semanas.</p></div>
+  <div class="bd g3" style="top:400px">
+    <div class="rn card a" style="--i:2"><span class="tag risk">R.N. 001 · Segurança</span><h2>Pensou em se ferir: CVV 188</h2><p>O paciente vê o CVV na hora e fica marcado como Risco.</p></div>
+    <div class="rn card a" style="--i:3"><span class="tag">R.N. 002 · Rastreio</span><h2>PHQ-9 de 9 ou mais</h2><p>É sinal de depressão, pela linha de cuidado.</p></div>
+    <div class="rn card a" style="--i:4"><span class="tag s">R.N. 003 · Encaminhamento</span><h2>O sistema sugere, o profissional decide</h2><p>16 semanas sem queda de 5 pontos, ou risco ao longo de 12.</p></div>
   </div>
-</section>
-
-<!-- ═════════════ 04b · Regras da rotina ═════════════ -->
-<section class="slide lt" id="s4b" data-sec="Regras de negócio" data-who="Pedro" data-title="As outras oito regras"
- data-notes="Passar rápido, sem ler tudo (cerca de 40 s). R.N. 004: 14, 21 ou 28 dias, padrão 14; nunca menos, porque o PHQ-9 pergunta sobre as últimas 2 semanas. R.N. 005: no fim do questionário o paciente vê só 'Suas respostas foram enviadas para a sua equipe'. R.N. 007: faixas 0–4 mínima, 5–9 leve, 10–14 moderada, 15–19 moderadamente grave, 20–27 grave; resposta ao tratamento a partir de 4 semanas (queda de 5+ adequada, 2 a 4 possivelmente inadequada, 1 ou menos inadequada). R.N. 008: Piorou = faixa acima da anterior; Sem resposta = 7 dias após a data prevista; o destaque sempre vem escrito, nunca só com cor. R.N. 011: a consulta com o especialista é marcada pela regulação, fora do sistema.">
-  <div class="hd sm"><p class="kick a">Regras de negócio</p><h1 class="title" data-split="E as oito que organizam a rotina"></h1></div>
-  <div class="bd g4 rr" style="top:330px">
-    <div class="card a" style="--i:2"><span class="tag">R.N. 004</span><h2>Periodicidade</h2><p>14, 21 ou 28 dias. Padrão de 14, nunca menos.</p></div>
-    <div class="card a" style="--i:2"><span class="tag">R.N. 005</span><h2>Paciente</h2><p>Vê só as próprias respostas, sem pontuação.</p></div>
-    <div class="card a" style="--i:3"><span class="tag">R.N. 006</span><h2>Psiquiatra</h2><p>Vê só os pacientes encaminhados a ele.</p></div>
-    <div class="card a" style="--i:3"><span class="tag">R.N. 007</span><h2>Evolução</h2><p>Cinco faixas e resposta ao tratamento após 4 semanas.</p></div>
-    <div class="card a" style="--i:4"><span class="tag s">R.N. 008</span><h2>Destaques</h2><p>Risco, Piorou, Sem resposta, Sugere encaminhamento, Em dia.</p></div>
-    <div class="card a" style="--i:4"><span class="tag s">R.N. 009</span><h2>Lembrete</h2><p>No dia e 3 dias depois, sem dado de saúde.</p></div>
-    <div class="card a" style="--i:5"><span class="tag s">R.N. 010</span><h2>Transferência</h2><p>Com motivo obrigatório, levando o histórico.</p></div>
-    <div class="card a" style="--i:5"><span class="tag s">R.N. 011</span><h2>Contrarreferência</h2><p>Novo, Visto e Respondido, com conduta obrigatória.</p></div>
+  <div class="bd chips" style="top:740px">
+    <span class="chip a" style="--i:5"><b>004</b>Responde a cada 14, 21 ou 28 dias</span>
+    <span class="chip a" style="--i:5"><b>005</b>Paciente não vê pontuação</span>
+    <span class="chip a" style="--i:5"><b>006</b>Psiquiatra só vê os seus</span>
+    <span class="chip a" style="--i:5"><b>007</b>Cinco faixas de gravidade</span>
+    <span class="chip a" style="--i:6"><b>008</b>Lista começa por quem tem Risco</span>
+    <span class="chip a" style="--i:6"><b>009</b>Lembrete no dia e 3 dias depois</span>
+    <span class="chip a" style="--i:6"><b>010</b>Transferência com motivo</span>
+    <span class="chip a" style="--i:6"><b>011</b>Novo, Visto, Respondido</span>
   </div>
-</section>
-
-<!-- ═════════════ 05 · Arquitetura ═════════════ -->
-<section class="slide lt" id="s5" data-sec="Arquitetura" data-who="Pedro" data-title="Cliente-servidor em três camadas"
- data-notes="Arquitetura (doc 1.4 e 1.5). Cliente-servidor porque três tipos de usuário acessam os mesmos dados de aparelhos diferentes e as regras precisam ficar num lugar só. Integrações: e-SUS APS para ler o cadastro individual (nome, celular, escolaridade, situação no trabalho, participação em grupo comunitário), assim o profissional abre o acompanhamento sem cadastrar tudo de novo; no protótipo essa leitura é imitada. WhatsApp pela API oficial para empresas: manda o lembrete e conduz o questionário, uma pergunta por mensagem; o paciente é reconhecido pelo número, sem login. Passa para o Vinicius.">
-  <div class="hd"><p class="kick a">Arquitetura</p><h1 class="title" data-split="Cliente-servidor em três camadas"></h1></div>
-  <svg class="wires" aria-hidden="true">
-    <path class="w p draw" pathLength="1" style="--i:3" d="M620 520 H710"/>
-    <path class="w p draw" pathLength="1" style="--i:4" d="M1210 520 H1300"/>
-    <path class="w d draw" pathLength="1" style="--i:6" d="M960 660 V710 Q960 726 944 726 H681 Q665 726 665 742 V770"/>
-    <path class="w d draw" pathLength="1" style="--i:6" d="M960 660 V710 Q960 726 976 726 H1239 Q1255 726 1255 742 V770"/>
-  </svg>
-  <div class="layer card a" style="--i:2;left:120px"><span class="well hot"><svg class="ic" aria-hidden="true"><use href="#i-layout"/></svg></span><small>Apresentação</small><h2>React, como PWA</h2><p>Um site só para celular e computador, sem instalar.</p></div>
-  <div class="layer card a" style="--i:3;left:710px"><span class="well"><svg class="ic" aria-hidden="true"><use href="#i-server"/></svg></span><small>Negócio</small><h2>Java + Spring Boot</h2><p>API REST com as regras. Login pelo gov.br; no WhatsApp, pelo número.</p></div>
-  <div class="layer card a" style="--i:4;left:1300px"><span class="well cool"><svg class="ic" aria-hidden="true"><use href="#i-db"/></svg></span><small>Dados</small><h2>PostgreSQL</h2><p>Paciente, acompanhamento, respostas, encaminhamento e transferência.</p></div>
-  <div class="ext card a" style="--i:6;left:415px"><span class="well sm"><svg class="ic" aria-hidden="true"><use href="#i-doc"/></svg></span><div><h2>e-SUS APS</h2><p>Lê o cadastro que a unidade já tem</p></div></div>
-  <div class="ext card a" style="--i:7;left:1005px"><span class="well sm ok"><svg class="ic" aria-hidden="true"><use href="#i-msg"/></svg></span><div><h2>WhatsApp</h2><p>Lembrete e conversa do questionário</p></div></div>
 </section>
 
 <!-- ═════════════ 06 · Divisor 02 ═════════════ -->
@@ -669,42 +707,21 @@ html.pdf .ui,.pdf .ui{display:none!important}
 </section>
 
 <!-- ═════════════ 07 · Números ═════════════ -->
-<section class="slide lt" id="s7" data-sec="Motivação" data-who="Vinicius" data-title="A depressão cresce, o cuidado não acompanha"
- data-notes="Pesquisa Nacional de Saúde (Brito et al., 2022): 10,2% dos adultos disseram ter diagnóstico de depressão em 2019, contra 7,6% em 2013. Só 52,8% procuraram atendimento nos 12 meses anteriores, a maior parte em consultório particular. No SUS, o tratamento começa no posto: a Linha de Cuidado diz que a maior parte dos casos pode ser manejada na atenção primária.">
-  <div class="hd"><p class="kick a">Motivação</p><h1 class="title" data-split="A depressão cresce,|o cuidado não acompanha"></h1></div>
-  <div class="bd g2" style="top:440px">
-    <div class="hot-card a fl" style="--i:2;padding:44px 48px"><p class="big-n">10,2%</p><p class="nt"><b>dos adultos</b> relatam diagnóstico de depressão (2019). Em 2013, eram 7,6%.</p></div>
-    <div class="card a fr" style="--i:3;padding:44px 48px"><p class="big-n">52,8%</p><p class="nt"><b>deles</b> procuraram atendimento nos 12 meses anteriores.</p></div>
+<section class="slide lt" id="s7" data-sec="Motivação" data-who="Vinicius" data-title="A depressão cresce, e medir faz diferença"
+ data-notes="PNS (Brito et al., 2022): 10,2% dos adultos relataram diagnóstico de depressão em 2019, contra 7,6% em 2013; só 52,8% procuraram atendimento nos 12 meses anteriores, a maior parte em consultório particular. No SUS, o tratamento começa no posto, e a Linha de Cuidado pede três coisas à equipe: medir com o PHQ-9, ir atrás de quem faltou ou abandonou e mandar informação completa ao encaminhar. Medir funciona: Guo et al. (2015), 120 pacientes, 73,8% de remissão no tratamento guiado por questionário contra 28,8% no comum; revisão de 51 artigos (Fortney et al., 2017) na mesma direção. TIC Domicílios 2025: 28 milhões não usam internet, 14 milhões nas classes D e E, onde 49% de quem tem celular ficou sem pacote de dados. Por isso o sistema é leve e o profissional pode responder pelo paciente. E dos 15 indicadores federais de qualidade da APS, nenhum é de saúde mental (SES/RS).">
+  <div class="hd"><p class="kick a">Motivação</p><h1 class="title" data-split="A depressão cresce,|e medir faz diferença"></h1></div>
+  <div class="bd stats" style="top:420px">
+    <div class="card a fl" style="--i:2"><p class="n">10,2%</p><p class="l">dos adultos relatam diagnóstico (2019). Eram 7,6% em 2013.</p></div>
+    <div class="card a" style="--i:3"><p class="n">52,8%</p><p class="l">deles procuraram atendimento no último ano.</p></div>
+    <div class="hot-card a" style="--i:4"><p class="n">73,8%</p><p class="l">de remissão medindo com questionário, contra <b>28,8%</b> no tratamento comum.</p></div>
+    <div class="card a fr" style="--i:5"><p class="n">28 mi</p><p class="l">de brasileiros não usam internet. O sistema precisa ser leve.</p></div>
   </div>
-  <p class="src a" style="--i:5">Fonte: Pesquisa Nacional de Saúde 2013 e 2019 (Brito et al., 2022)</p>
-</section>
-
-<!-- ═════════════ 08 · Evidência ═════════════ -->
-<section class="slide lt" id="s8" data-sec="Motivação" data-who="Vinicius" data-title="Medir com frequência muda o resultado"
- data-notes="Guo et al. (2015), ensaio com 120 pacientes: 73,8% dos que tiveram tratamento guiado por questionários chegaram à remissão (sem sintomas), contra 28,8% no tratamento comum. A revisão de Fortney et al. (2017), com 51 artigos, aponta na mesma direção: quando o profissional recebe essas medidas com frequência, o tratamento vai melhor. É exatamente o que a Linha de Cuidado pede ao posto: medir com o PHQ-9.">
-  <div class="hd"><p class="kick a">Evidência</p><h1 class="title" data-split="Medir com frequência|muda o resultado"></h1></div>
-  <div class="bd g2" style="top:430px;bottom:220px">
-    <div class="duo p a fl" style="--i:2"><div class="top"><span class="well"><svg class="ic" aria-hidden="true"><use href="#i-chart"/></svg></span>Guiado por questionário</div><h2>73,8%</h2><p>chegaram à remissão</p></div>
-    <div class="duo s a fr" style="--i:4"><div class="top"><span class="well"><svg class="ic" aria-hidden="true"><use href="#i-clock"/></svg></span>Tratamento comum</div><h2>28,8%</h2><p>chegaram à remissão</p></div>
-  </div>
-  <p class="src a" style="--i:6;top:884px">Guo et al. (2015), 120 pacientes. Revisão de 51 artigos (Fortney et al., 2017) na mesma direção.</p>
-</section>
-
-<!-- ═════════════ 09 · A lacuna ═════════════ -->
-<section class="slide lt" id="s9" data-sec="Motivação" data-who="Vinicius" data-title="Hoje, a equipe só sabe na próxima consulta"
- data-notes="O problema concreto: entre uma consulta e outra, ninguém sabe como o paciente está. Dos 15 indicadores de qualidade que o governo federal usa para financiar a APS, nenhum é de saúde mental (lista da SES/RS). TIC Domicílios 2025: 28 milhões não usam internet, 14 milhões nas classes D e E; nessas classes, 49% de quem tem celular ficou sem pacote de dados em algum momento dos três meses anteriores. Por isso o sistema é leve e o profissional pode responder pelo paciente.">
-  <div class="hd"><p class="kick a">O problema</p><h1 class="title" data-split="Hoje, a equipe só sabe|na próxima consulta"></h1></div>
-  <div class="bd g2" style="top:420px;gap:28px 40px">
-    <div class="it card a" style="--i:2"><span class="well no"><svg class="ic" aria-hidden="true"><use href="#i-alert"/></svg></span><div><h2>Piora sem aviso</h2><p>Se o paciente piora ou desiste, ninguém fica sabendo a tempo.</p></div></div>
-    <div class="it card a" style="--i:3"><span class="well"><svg class="ic" aria-hidden="true"><use href="#i-doc"/></svg></span><div><h2>Encaminhamento sem histórico</h2><p>O psiquiatra não vê como os sintomas evoluíram.</p></div></div>
-    <div class="it card a" style="--i:4"><span class="well"><svg class="ic" aria-hidden="true"><use href="#i-chart"/></svg></span><div><h2>0 de 15 indicadores</h2><p>Nenhum indicador federal da APS é de saúde mental.</p></div></div>
-    <div class="it card a" style="--i:5"><span class="well"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg></span><div><h2>28 milhões sem internet</h2><p>Por isso: site leve e resposta registrada pelo profissional.</p></div></div>
-  </div>
+  <p class="src a" style="--i:6">Fontes: PNS 2013 e 2019 (Brito et al., 2022); Guo et al. (2015); TIC Domicílios 2025</p>
 </section>
 
 <!-- ═════════════ 10 · Sistemas semelhantes ═════════════ -->
 <section class="slide lt" id="s10" data-sec="Sistemas semelhantes" data-who="Vinicius" data-title="Ninguém cobre o intervalo dentro do SUS"
- data-notes="e-SUS APS: o prontuário que o posto já usa; no manual e nas notas das versões 5.3 a 5.6 não encontramos questionário de depressão nem resposta fora da consulta. Meu SUS Digital: app do cidadão; desde julho de 2026 leva ao Pode Falar (escuta para jovens de 13 a 24 anos), uma conversa pontual que não mede sintomas nem avisa a equipe. NeuroFlow: a ideia mais parecida, mas paga e feita para planos e hospitais dos EUA. Passa para o Vitor.">
+ data-notes="Começar pela lacuna: hoje a equipe só sabe como o paciente está quando ele volta à consulta; se piora ou desiste, ninguém fica sabendo a tempo, e o psiquiatra recebe o caso sem histórico. e-SUS APS: o prontuário que o posto já usa; no manual e nas notas das versões 5.3 a 5.6 não encontramos questionário de depressão nem resposta fora da consulta. Meu SUS Digital: app do cidadão; desde julho de 2026 leva ao Pode Falar (escuta para jovens de 13 a 24 anos), uma conversa pontual que não mede sintomas nem avisa a equipe. NeuroFlow: a ideia mais parecida, mas paga e feita para planos e hospitais dos EUA. Passa para o Vitor.">
   <div class="hd"><p class="kick a">Sistemas semelhantes</p><h1 class="title" data-split="Ninguém cobre o intervalo|dentro do SUS"></h1></div>
   <div class="bd tbl cmp" style="top:420px">
     <div class="tr th a" style="--i:1"><span></span><span>e-SUS APS</span><span>Meu SUS Digital</span><span>NeuroFlow</span><span class="us"><span class="dot p"></span>Entre Consultas</span></div>
@@ -766,84 +783,40 @@ html.pdf .ui,.pdf .ui{display:none!important}
   <span class="num a fd" aria-hidden="true">04</span>
   <p class="part a"><span class="bar"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span>Parte 04 de 05</p>
   <h1 data-split="Protótipos"></h1>
-  <p class="sub a" style="--i:3">Navegável em React, com dados fictícios: entre-consultas-sigma.vercel.app</p>
+  <p class="sub a" style="--i:3">Os requisitos no protótipo, e o protótipo ao vivo</p>
   <p class="who a" style="--i:5"><b>R</b>Raphael <small>apresenta</small></p>
 </section>
 
-<!-- ═════════════ 15 · Paciente ═════════════ -->
-<section class="slide lt" id="s15" data-sec="Protótipos · Paciente" data-who="Raphael" data-title="Responde pelo WhatsApp ou pelo site"
- data-notes="Telas: lembrete no WhatsApp, a conversa com uma pergunta por vez e a mesma pergunta pelo site. O paciente escolhe o canal a cada vez. O lembrete vai no dia previsto e de novo 3 dias depois, sem dado de saúde no texto (R.N. 009). No WhatsApp: Escolher resposta, marcar e Enviar. A pontuação é calculada, mas nunca é mostrada ao paciente (R.N. 005); ele pode rever as respostas anteriores (R.F. 003).">
-  <div class="lc">
-    <p class="kick a">Paciente</p>
-    <h1 class="title" data-split="Responde pelo|WhatsApp ou|pelo site"></h1>
-    <p class="lead a" style="--i:2;margin-top:34px">As nove perguntas do PHQ-9 e o que está pesando no momento: trabalho, família, dinheiro.</p>
+<!-- ═════════════ 12 · Requisitos no protótipo ═════════════ -->
+<section class="slide lt" id="srf" data-sec="Protótipos" data-who="Raphael" data-title="Os 12 requisitos no protótipo"
+ data-notes="Cada requisito funcional tem pelo menos uma tela no protótipo; as 20 telas estão na documentação (Figuras 1 a 20), com o nome do R.F. como título. Login pela conta gov.br para todos; no WhatsApp o paciente é reconhecido pelo número. No próximo slide, o protótipo ao vivo.">
+  <div class="hd"><p class="kick a">Protótipos</p><h1 class="title" data-split="Os 12 requisitos,|tela a tela"></h1></div>
+  <p class="auth a" style="--i:2"><b>R.F. 001</b>Autenticar com a conta gov.br, para os três perfis</p>
+  <div class="bd g3 rf" style="top:480px">
+    <div class="card a" style="--i:3"><div class="rh"><span class="well hot"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg></span><h2>Paciente</h2></div><ul><li><b>002</b>Responder questionário</li><li><b>003</b>Ver respostas anteriores</li><li><b>010</b>Receber lembrete</li></ul></div>
+    <div class="card a" style="--i:4"><div class="rh"><span class="well"><svg class="ic" aria-hidden="true"><use href="#i-users"/></svg></span><h2>Profissional da unidade</h2></div><ul><li><b>004</b>Registrar respostas pelo paciente</li><li><b>005</b>Abrir e encerrar acompanhamento</li><li><b>006</b>Listar pacientes acompanhados</li><li><b>007</b>Ver evolução do paciente</li><li><b>008</b>Encaminhar ao especialista</li><li><b>011</b>Transferir paciente</li></ul></div>
+    <div class="card a" style="--i:5"><div class="rh"><span class="well cool"><svg class="ic" aria-hidden="true"><use href="#i-doc"/></svg></span><h2>Psiquiatra</h2></div><ul><li><b>009</b>Ver encaminhamentos recebidos</li><li><b>007</b>Ver evolução do paciente</li><li><b>012</b>Responder encaminhamento</li></ul></div>
   </div>
-  <figure class="phone a fr" style="--i:2;left:800px"><img src="img/p17.webp" alt="Lembrete do questionário no WhatsApp"><figcaption>R.F. 010 · Lembrete</figcaption></figure>
-  <figure class="phone a fr" style="--i:3;left:1140px"><img src="img/p05.webp" alt="Pergunta do PHQ-9 na conversa do WhatsApp"><figcaption>R.F. 002 · No WhatsApp</figcaption></figure>
-  <figure class="phone a fr" style="--i:4;left:1480px"><img src="img/p02.webp" alt="Pergunta do PHQ-9 no site"><figcaption>R.F. 002 · No site</figcaption></figure>
 </section>
 
-<!-- ═════════════ 16 · CVV ═════════════ -->
-<section class="slide lt" id="s16" data-sec="Protótipos · Segurança" data-who="Raphael" data-title="Pensou em se ferir? O CVV aparece na hora"
- data-notes="R.N. 001 na tela: qualquer resposta diferente de 'nenhuma vez' na pergunta 9 mostra o CVV (188, gratuito, 24 horas), com botão para ligar, e avisa a equipe do posto. O sistema diz com clareza que não acompanha em tempo real e lembra o SAMU (192) em emergência.">
-  <div class="lc">
-    <p class="kick a">Segurança do paciente</p>
-    <h1 class="title" data-split="Pensou em se|ferir? O CVV|aparece na hora"></h1>
-    <p class="lead a" style="--i:2;margin-top:34px">O paciente fica marcado como <b>Risco</b> na lista da equipe. O sistema deixa claro que não acompanha em tempo real.</p>
+<!-- ═════════════ 13 · Protótipo ao vivo ═════════════ -->
+<section class="slide lt" id="slive" data-sec="Protótipo ao vivo" data-who="Raphael" data-title="Protótipo ao vivo"
+ data-notes="O protótipo roda dentro do slide: clique na tela para navegar. Para voltar a usar as setas da apresentação, clique fora do quadro. Na tela de login, o botão do gov.br abre o menu de visões da demonstração. Roteiro (cerca de 2 min): 1) Ana responde no WhatsApp e marca 'vários dias' na pergunta 9, aparece o CVV (R.F. 002, R.N. 001); 2) Juliana, na equipe, vê Ana no topo com o destaque Risco (R.F. 006, 007); 3) Carlos tem sugestão de encaminhamento e Juliana encaminha com o resumo (R.F. 008); 4) Dr. Marcos abre o resumo e responde à unidade com conduta e medicação (R.F. 009, 012). Se a rede falhar, use o botão 'abrir em nova aba' ou as figuras da documentação. Passa para o Ruan.">
+  <div class="lv">
+    <p class="kick a">Protótipo ao vivo</p>
+    <h1 class="title" data-split="Um caso, do|celular ao|psiquiatra"></h1>
+    <ol class="rt a" style="--i:2">
+      <li><b>01</b>Ana responde no WhatsApp</li>
+      <li><b>02</b>Juliana vê o alerta de risco</li>
+      <li><b>03</b>Carlos é encaminhado</li>
+      <li><b>04</b>Dr. Marcos responde</li>
+    </ol>
   </div>
-  <figure class="phone a fr" style="--i:2;left:1060px"><img src="img/p04.webp" alt="Alerta do CVV no site"><figcaption>R.F. 002 · No site</figcaption></figure>
-  <figure class="phone a fr" style="--i:3;left:1470px"><img src="img/p07.webp" alt="Alerta do CVV no WhatsApp"><figcaption>R.F. 002 · No WhatsApp</figcaption></figure>
-</section>
-
-<!-- ═════════════ 17 · Equipe ═════════════ -->
-<section class="slide lt" id="s17" data-sec="Protótipos · Equipe" data-who="Raphael" data-title="A equipe vê primeiro quem precisa de atenção"
- data-notes="Lista agrupada na ordem da R.N. 008: Risco, Piorou, Sem resposta (7 dias após a data prevista), Sugere encaminhamento, Em dia; o destaque sempre vem escrito, nunca só com cor. Ao abrir um paciente: gráfico do PHQ-9 com as faixas, alertas da pergunta 9, canal de cada resposta e contexto social vindo do e-SUS.">
-  <div class="hd"><p class="kick a">Profissional do posto</p><h1 class="title" data-split="A equipe vê primeiro|quem precisa de atenção"></h1></div>
-  <figure class="shot a fl" style="--i:2;left:120px;top:400px;width:760px"><img src="img/p12.webp" alt="Lista de pacientes acompanhados com destaques"><figcaption>R.F. 006 · Lista agrupada pelos destaques</figcaption></figure>
-  <figure class="shot a fr" style="--i:3;left:1040px;top:400px;width:760px"><img src="img/p13.webp" alt="Evolução do PHQ-9 de um paciente"><figcaption>R.F. 007 · Evolução, com faixas e contexto</figcaption></figure>
-</section>
-
-<!-- ═════════════ 18 · Registrar e transferir ═════════════ -->
-<section class="slide lt" id="s18" data-sec="Protótipos · Equipe" data-who="Raphael" data-title="Ninguém fica de fora nem sem responsável"
- data-notes="R.F. 004: quem não tem celular ou pacote de dados (lembrar o dado da TIC Domicílios) responde com o profissional, na unidade ou na visita domiciliar, e a resposta entra na mesma evolução. R.F. 011: nas férias, afastamento ou saída da unidade, o profissional passa o acompanhamento para um colega ou o encaminhamento para outro psiquiatra; motivo obrigatório, histórico vai junto e fica registrado quem, quando e por quê (R.N. 010). O R.F. 005 (abrir e encerrar acompanhamento) está na documentação, Figuras 10 e 11.">
-  <div class="hd"><p class="kick a">Profissional do posto</p><h1 class="title" data-split="Ninguém fica de fora|nem sem responsável"></h1></div>
-  <figure class="shot a fl" style="--i:2;left:120px;top:400px;width:760px"><img src="img/p09.webp" alt="Registrar respostas pelo paciente"><figcaption>R.F. 004 · Registrar respostas pelo paciente</figcaption></figure>
-  <figure class="shot a fr" style="--i:3;left:1040px;top:400px;width:760px"><img src="img/p18.webp" alt="Confirmação da transferência do paciente"><figcaption>R.F. 011 · Transferir paciente</figcaption></figure>
-</section>
-
-<!-- ═════════════ 19 · Encaminhamento ═════════════ -->
-<section class="slide lt" id="s19" data-sec="Protótipos · Psiquiatra" data-who="Raphael" data-title="O psiquiatra recebe o caso com histórico"
- data-notes="Encaminhar ao especialista: o resumo é gerado (pontuação inicial e atual, semanas de acompanhamento, pergunta 9 ao longo do tempo, estressores, contexto social) e o profissional completa com prejuízo funcional e tratamentos já feitos. O psiquiatra vê a lista por prioridade e o resumo. A lista do psiquiatra começa por quem pensou em se ferir; abrir o resumo muda o encaminhamento de Novo para Visto.">
-  <div class="hd"><p class="kick a">Encaminhamento</p><h1 class="title" data-split="O psiquiatra recebe|o caso com histórico"></h1></div>
-  <figure class="shot a fl" style="--i:2;left:120px;top:400px;width:760px"><img src="img/p14.webp" alt="Encaminhar ao especialista com resumo"><figcaption>R.F. 008 · Encaminhar com o resumo gerado</figcaption></figure>
-  <figure class="shot a fr" style="--i:3;left:1040px;top:400px;width:760px"><img src="img/p16.webp" alt="Resumo do encaminhamento visto pelo psiquiatra"><figcaption>R.F. 009 · Resumo que o psiquiatra recebe</figcaption></figure>
-</section>
-
-<!-- ═════════════ 19b · Contrarreferência ═════════════ -->
-<section class="slide lt" id="s19b" data-sec="Protótipos · Psiquiatra" data-who="Raphael" data-title="A orientação volta para a unidade"
- data-notes="R.F. 012 e R.N. 011: o psiquiatra preenche conduta, medicação e quando reencaminhar (obrigatórios) e envia à unidade; o encaminhamento passa a Respondido. A orientação aparece na ficha do paciente, e a lista da equipe mostra 'Orientação do Dr.' na linha dele. A consulta com o especialista é marcada pela regulação, fora do sistema, e o paciente continua acompanhado pela unidade.">
-  <div class="hd"><p class="kick a">Contrarreferência</p><h1 class="title" data-split="A orientação volta|para a unidade"></h1></div>
-  <figure class="shot a fl" style="--i:2;left:120px;top:400px;width:760px"><img src="img/p19.webp" alt="Psiquiatra respondendo à unidade"><figcaption>R.F. 012 · Psiquiatra responde à unidade</figcaption></figure>
-  <figure class="shot a fr" style="--i:3;left:1040px;top:400px;width:760px"><img src="img/p20.webp" alt="Orientação do psiquiatra na ficha da unidade"><figcaption>R.F. 012 · Orientação na ficha do paciente</figcaption></figure>
-</section>
-
-<!-- ═════════════ 20 · Demo ═════════════ -->
-<section class="slide lt" id="s20" data-sec="Demonstração" data-who="Raphael" data-title="Roteiro da demo"
- data-notes="Demo ao vivo, opcional e só se houver tempo (~2 min). Cada avanço marca um passo. O botão Demonstração, no canto da tela, troca de perfil sem passar pelo gov.br. Se a rede falhar, os slides anteriores já mostram as telas. Passa para o Ruan.">
-  <div class="hd sm"><p class="kick a">Demonstração</p><h1 class="title" data-split="Um caso, do celular ao psiquiatra"></h1></div>
-  <div class="bd split" style="top:330px;grid-template-columns:minmax(0,1.45fr) minmax(0,1fr)">
-    <div class="term a fl" style="--i:1">
-      <div class="bar"><svg class="ic" aria-hidden="true"><use href="#i-term"/></svg>entre-consultas-sigma.vercel.app</div>
-      <ol>
-        <li data-step="1"><span class="s"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 12.5l4 4L18 8"/></svg></span><span class="n">01</span><span><b>Ana responde no WhatsApp</b>Marca “vários dias” na pergunta 9</span></li>
-        <li data-step="2"><span class="s"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 12.5l4 4L18 8"/></svg></span><span class="n">02</span><span><b>Juliana vê o alerta</b>Ana sobe para o topo com destaque de risco</span></li>
-        <li data-step="3"><span class="s"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 12.5l4 4L18 8"/></svg></span><span class="n">03</span><span><b>Carlos é encaminhado</b>O sistema sugeriu; Juliana decide</span></li>
-        <li data-step="4"><span class="s"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 12.5l4 4L18 8"/></svg></span><span class="n">04</span><span><b>Dr. Marcos responde</b>Conduta, medicação e quando reencaminhar</span></li>
-      </ol>
-    </div>
-    <div class="stack">
-      <div class="it card a fr" style="--i:3"><span class="well hot"><svg class="ic" aria-hidden="true"><use href="#i-link"/></svg></span><div><h2>Protótipo navegável</h2><p>Dados fictícios, sem backend. A leitura do e-SUS é imitada.</p></div></div>
-      <div class="it card a fr" style="--i:4"><span class="well"><svg class="ic" aria-hidden="true"><use href="#i-users"/></svg></span><div><h2>Botão Demonstração</h2><p>No canto da tela, troca de perfil sem passar pelo gov.br.</p></div></div>
+  <div class="live card a fr" style="--i:2">
+    <div class="bar"><span class="dots"><i></i><i></i><i></i></span><span class="url">entre-consultas-sigma.vercel.app</span><a href="https://entre-consultas-sigma.vercel.app/login" target="_blank" rel="noopener">abrir em nova aba ↗</a></div>
+    <div class="vp">
+      <img class="fallback" src="img/p12.webp" alt="Lista de pacientes no protótipo">
+      <iframe src="https://entre-consultas-sigma.vercel.app/login" title="Protótipo navegável do Entre Consultas" loading="lazy"></iframe>
     </div>
   </div>
 </section>
@@ -859,22 +832,27 @@ html.pdf .ui,.pdf .ui{display:none!important}
   <p class="who a" style="--i:5"><b>R</b>Ruan <small>apresenta</small></p>
 </section>
 
-<!-- ═════════════ 22 · Conclusões ═════════════ -->
-<section class="slide lt" id="s22" data-sec="Conclusões" data-who="Ruan" data-title="O que entregamos e o que falta"
- data-notes="Objetivo: reduzir a lacuna de informação entre as consultas e ajudar a continuidade do tratamento na APS. Resultados: acompanhamento periódico com o PHQ-9, destaque de quem precisa de atenção e informação compartilhada entre os profissionais; vários canais de resposta por causa da desigualdade de acesso à tecnologia. Limitações: validar na prática com profissionais e pacientes (requisitos, periodicidade, se ajuda a rotina); aprofundar protocolos, responsabilidades e encaminhamento dos casos de risco; reforçar segurança da informação e privacidade, porque os dados são sensíveis. Futuro: versão funcional, testes de usabilidade e acessibilidade, viabilidade da integração com o e-SUS APS, piloto numa unidade básica e indicadores de adesão, tempo de resposta dos profissionais, continuidade e efetividade.">
-  <div class="hd"><p class="kick a">Conclusões</p><h1 class="title" data-split="O que entregamos|e o que falta"></h1></div>
-  <div class="bd g3 cc" style="top:430px">
-    <div class="card a" style="--i:2"><span class="well ok"><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg></span><h2>Resultados</h2><ul><li>Acompanhamento periódico com o PHQ-9</li><li>Destaque de quem precisa de atenção</li><li>Histórico compartilhado com o psiquiatra</li></ul></div>
-    <div class="card a" style="--i:3"><span class="well no"><svg class="ic" aria-hidden="true"><use href="#i-alert"/></svg></span><h2>Limitações</h2><ul><li>Falta validar com equipes e pacientes</li><li>Protocolo para os casos de risco</li><li>Segurança e privacidade dos dados</li></ul></div>
-    <div class="card a" style="--i:4"><span class="well cool"><svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></span><h2>Trabalhos futuros</h2><ul><li>Versão funcional e testes de usabilidade</li><li>Viabilidade da integração com o e-SUS</li><li>Piloto numa unidade, com indicadores</li></ul></div>
+<!-- ═════════════ 15 · Resultados e limitações ═════════════ -->
+<section class="slide lt" id="s22" data-sec="Conclusões" data-who="Ruan" data-title="O que o trabalho entregou e onde ele para"
+ data-notes="Objetivo: reduzir a lacuna de informação entre as consultas e ajudar a continuidade do tratamento na APS. Resultados: um sistema modelado para acompanhar o paciente com o PHQ-9 de tempos em tempos, destacar quem precisa de atenção e compartilhar a informação entre os profissionais; os vários canais de resposta pensam na desigualdade de acesso à tecnologia. Limitações: falta validar na prática com profissionais e pacientes (se os requisitos batem com a necessidade real, se a periodicidade é adequada, se ajuda a rotina da equipe); os casos de risco pedem protocolos, responsabilidades e fluxo de encaminhamento mais definidos; e os dados são sensíveis, então segurança e privacidade precisam de mais mecanismos.">
+  <div class="hd"><p class="kick a">Conclusões</p><h1 class="title" data-split="O que entregamos|e onde ainda para"></h1></div>
+  <div class="bd g2 cc" style="top:420px">
+    <div class="card a fl" style="--i:2"><span class="well ok"><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg></span><h2>Resultados</h2><ul><li>Acompanhamento periódico com o PHQ-9</li><li>Destaque de quem precisa de atenção</li><li>Histórico compartilhado com o psiquiatra</li><li>Vários canais, pensando no acesso desigual</li></ul></div>
+    <div class="card a fr" style="--i:3"><span class="well no"><svg class="ic" aria-hidden="true"><use href="#i-alert"/></svg></span><h2>Limitações</h2><ul><li>Falta validar com equipes e pacientes</li><li>Periodicidade ainda não testada na prática</li><li>Casos de risco pedem protocolo próprio</li><li>Dados sensíveis exigem mais segurança</li></ul></div>
   </div>
 </section>
 
-<!-- ═════════════ 23 · Frase ═════════════ -->
-<section class="slide dk frase" id="s23" data-sec="Para levar" data-who="Ruan" data-title="A tecnologia complementa o cuidado"
- data-cable="M2080 260 C 1600 300, 1300 600, 1000 820 S 300 1100, -140 960"
- data-notes="Fecha com a última ideia da conclusão do doc: o sistema é uma ferramenta complementar ao cuidado humano, sem substituir a avaliação clínica e a relação entre paciente e equipe. Pausa antes de seguir.">
-  <h1 data-split="A tecnologia complementa|o cuidado. Não substitui|a equipe."></h1>
+<!-- ═════════════ 16 · Trabalhos futuros ═════════════ -->
+<section class="slide lt" id="s22b" data-sec="Conclusões" data-who="Ruan" data-title="Próximos passos"
+ data-notes="Trabalhos futuros, do doc: versão funcional; testes de usabilidade e acessibilidade; estudo de viabilidade da integração com o e-SUS APS; projeto-piloto numa unidade básica, com indicadores de adesão dos pacientes, tempo de resposta dos profissionais, continuidade do acompanhamento e efetividade. Fechar com a última ideia da conclusão: a efetividade depende de validação e de integração com os processos do SUS, e a tecnologia é complementar ao cuidado humano, sem substituir a avaliação clínica nem a relação entre paciente e equipe.">
+  <div class="hd"><p class="kick a">Trabalhos futuros</p><h1 class="title" data-split="Do modelo para|a unidade de saúde"></h1></div>
+  <div class="bd g4 fut" style="top:420px">
+    <div class="card a" style="--i:2"><span class="n">01</span><h2>Versão funcional</h2><p>Sair do protótipo com dados fictícios.</p></div>
+    <div class="card a" style="--i:3"><span class="n">02</span><h2>Testes com usuários</h2><p>Usabilidade e acessibilidade.</p></div>
+    <div class="card a" style="--i:4"><span class="n">03</span><h2>Integração com o e-SUS</h2><p>Estudar se é viável.</p></div>
+    <div class="card a" style="--i:5"><span class="n">04</span><h2>Piloto numa UBS</h2><p>Medindo adesão, resposta e continuidade.</p></div>
+  </div>
+  <div class="close ink-card a" style="--i:7"><p>Uma ferramenta que <b>complementa</b> o cuidado: não substitui a avaliação clínica nem a relação entre paciente e equipe.</p></div>
 </section>
 
 <!-- ═════════════ 24 · Referências ═════════════ -->
