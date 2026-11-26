@@ -501,6 +501,24 @@ html.pdf #slive .hint{display:none}
 #s22b .fut{top:400px!important;align-items:start}
 #s22b .fut>div{min-height:240px}
 #s22b .close{top:740px}
+/* visão geral + arquitetura */
+#s3 .vg{position:absolute;left:120px;top:150px;width:780px}
+#s3 .vg .lead{margin-top:34px;font-size:32px}
+#s3 .who3{margin-top:40px;display:flex;flex-wrap:wrap;gap:14px}
+#s3 .who3 span{display:inline-flex;align-items:center;gap:12px;padding:14px 22px;border-radius:999px;background:var(--w);box-shadow:0 0 0 1.5px var(--line);font:500 25px var(--sans);color:var(--ink-2)}
+#s3 .who3 .ic{width:26px;height:26px;color:var(--p-txt)}
+#s3 .arq{position:absolute;left:980px;top:130px;width:820px;padding:34px 40px 36px}
+#s3 .ah{font:500 21px var(--mono);color:var(--mut);margin-bottom:22px}
+#s3 .ly{display:flex;align-items:center;gap:22px;padding:18px 22px;border-radius:20px;background:var(--paper)}
+#s3 .ly .well{flex:none;width:62px;height:62px}
+#s3 .ly small{display:block;font:500 19px var(--mono);color:var(--mut)}
+#s3 .ly h2{margin-top:2px;font:600 32px var(--sans);letter-spacing:-.02em}
+#s3 .ly p{margin-top:4px;font:400 23px/1.3 var(--sans);color:var(--mut)}
+#s3 .ar{display:block;width:3px;height:22px;margin:4px 0 4px 52px;background:var(--wire);border-radius:2px}
+#s3 .ext2{margin-top:24px;padding-top:22px;border-top:1.5px dashed var(--wire);display:flex;gap:14px;flex-wrap:wrap}
+#s3 .ext2 span{display:inline-flex;align-items:center;gap:10px;padding:12px 18px;border-radius:14px;box-shadow:0 0 0 1.5px var(--line);font:400 22px var(--sans);color:var(--ink-2)}
+#s3 .ext2 .ic{width:24px;height:24px;color:var(--s-txt)}
+#s3 .ext2 b{font-weight:600}
 
 
 /* ═════════════ Interface do apresentador ═════════════ */
@@ -653,24 +671,27 @@ html.pdf .ui,.pdf .ui{display:none!important}
   <span class="num a fd" aria-hidden="true">01</span>
   <p class="part a"><span class="bar"><i class="on"></i><i></i><i></i><i></i><i></i></span>Parte 01 de 05</p>
   <h1 data-split="O sistema"></h1>
-  <p class="sub a" style="--i:3">Visão geral e regras de negócio</p>
+  <p class="sub a" style="--i:3">Visão geral, arquitetura e regras de negócio</p>
   <p class="who a" style="--i:5"><b>P</b>Pedro <small>apresenta</small></p>
 </section>
 
-<!-- ═════════════ 03 · Visão geral ═════════════ -->
-<section class="slide lt" id="s3" data-sec="Descritivo" data-who="Pedro" data-title="Um site para o tempo entre consultas"
- data-notes="Visão geral (doc 1.1). É um site que funciona no celular e no computador. Três tipos de usuário. De tempos em tempos o paciente responde ao PHQ-9 (Patient Health Questionnaire-9, nove perguntas sobre sintomas de depressão) e a perguntas sobre o que está pesando: trabalho, família, dinheiro. Login dos três pela conta gov.br; no WhatsApp o paciente é reconhecido pelo número do cadastro. Fora do escopo: agendamento, teleconsulta e receita. Ponto-chave: não substitui o prontuário, ajuda o posto a fazer o que o Ministério da Saúde já recomenda.">
-  <div class="split" style="position:absolute;left:120px;right:120px;top:150px">
-    <div>
-      <p class="kick a">O que é?</p>
-      <h1 class="title" data-split="Um site para|o tempo entre|consultas"></h1>
-      <p class="lead a" style="--i:2;margin-top:34px">Os três perfis entram com a conta gov.br. <b>Não substitui o prontuário</b> e deixa de fora agendamento, teleconsulta e receita.</p>
-    </div>
-    <div class="stack" style="margin-top:20px">
-      <div class="it card a fr" style="--i:3"><span class="well hot"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg></span><div><h2>Paciente</h2><p>Responde pelo WhatsApp, pelo site ou com o profissional.</p></div></div>
-      <div class="it card a fr" style="--i:4"><span class="well"><svg class="ic" aria-hidden="true"><use href="#i-users"/></svg></span><div><h2>Equipe do posto</h2><p>Vê quem piorou ou parou de responder e encaminha.</p></div></div>
-      <div class="it card a fr" style="--i:5"><span class="well cool"><svg class="ic" aria-hidden="true"><use href="#i-doc"/></svg></span><div><h2>Psiquiatra</h2><p>Recebe o histórico e devolve uma orientação à unidade.</p></div></div>
-    </div>
+<!-- ═════════════ 03 · Visão geral e arquitetura ═════════════ -->
+<section class="slide lt" id="s3" data-sec="Descritivo" data-who="Pedro" data-title="Visão geral e arquitetura"
+ data-notes="Visão geral (doc 1.1 e 1.3): um site que funciona no celular e no computador, para acompanhar o tratamento de depressão de quem é atendido na unidade básica. Três perfis: paciente, profissional da unidade e psiquiatra, todos com a conta gov.br. De tempos em tempos o paciente responde ao PHQ-9 (Patient Health Questionnaire-9, nove perguntas sobre sintomas) e a perguntas sobre o que está pesando: trabalho, família, dinheiro. Não substitui o prontuário e deixa de fora agendamento, teleconsulta e receita. Arquitetura (doc 1.4 e 1.5): cliente-servidor em camadas, porque três tipos de usuário acessam os mesmos dados de aparelhos diferentes e as regras precisam ficar num lugar só. Apresentação em duas frentes: site em React como PWA, que abre no navegador sem instalar e usa uma biblioteca de gráficos para o PHQ-9, e app mobile em Flutter; os dois consomem a mesma API; Java com Spring Boot oferecendo uma API REST; PostgreSQL porque os dados são relacionados entre si. Integrações: e-SUS APS lê o cadastro individual (nome, celular, escolaridade, trabalho, grupo comunitário), imitado no protótipo; WhatsApp pela API oficial manda o lembrete e conduz o questionário, reconhecendo o paciente pelo número.">
+  <div class="vg">
+    <p class="kick a">Visão geral</p>
+    <h1 class="title" data-split="Web e app para o|intervalo entre|consultas"></h1>
+    <p class="lead a" style="--i:2">Acompanha a depressão de quem é atendido no posto. Três perfis, todos com a conta gov.br. <b>Não substitui o prontuário.</b></p>
+    <p class="who3 a" style="--i:3"><span><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg>Paciente</span><span><svg class="ic" aria-hidden="true"><use href="#i-users"/></svg>Equipe do posto</span><span><svg class="ic" aria-hidden="true"><use href="#i-doc"/></svg>Psiquiatra</span></p>
+  </div>
+  <div class="arq card a fr" style="--i:3">
+    <p class="ah">Arquitetura cliente-servidor em camadas</p>
+    <div class="ly"><span class="well hot"><svg class="ic" aria-hidden="true"><use href="#i-layout"/></svg></span><div><small>Apresentação</small><h2>React (web) + Flutter (mobile)</h2><p>Site como PWA, sem instalar, e app para celular</p></div></div>
+    <span class="ar" aria-hidden="true"></span>
+    <div class="ly"><span class="well"><svg class="ic" aria-hidden="true"><use href="#i-server"/></svg></span><div><small>Negócio</small><h2>Java + Spring Boot</h2><p>API REST com as regras e o login pelo gov.br</p></div></div>
+    <span class="ar" aria-hidden="true"></span>
+    <div class="ly"><span class="well cool"><svg class="ic" aria-hidden="true"><use href="#i-db"/></svg></span><div><small>Dados</small><h2>PostgreSQL</h2><p>Paciente, acompanhamento, respostas e encaminhamento</p></div></div>
+    <div class="ext2"><span><svg class="ic" aria-hidden="true"><use href="#i-doc"/></svg><b>e-SUS APS</b> lê o cadastro</span><span><svg class="ic" aria-hidden="true"><use href="#i-msg"/></svg><b>WhatsApp</b> lembrete e questionário</span></div>
   </div>
 </section>
 
