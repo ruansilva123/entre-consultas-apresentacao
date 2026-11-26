@@ -520,6 +520,18 @@ html.pdf #slive .hint{display:none}
 #s3 .ext2 .ic{width:24px;height:24px;color:var(--s-txt)}
 #s3 .ext2 b{font-weight:600}
 
+/* protótipo: expandir */
+#slive .xp{display:inline-flex;align-items:center;padding:8px 16px;border:0;border-radius:999px;background:var(--p);color:var(--w);font:600 19px var(--sans);cursor:pointer}
+#slive .xp:hover{filter:brightness(1.1)}
+#slive .xp .off{display:none}
+#slive .live{transition:left .35s ease,top .35s ease,width .35s ease,height .35s ease,border-radius .35s ease}
+#slive .live.big{left:0;top:0;width:1920px;height:1080px;border-radius:0;z-index:60}
+#slive .live.big .xp .on{display:none}
+#slive .live.big .xp .off{display:inline}
+#slive .live.big .vp{width:1920px;height:1028px}
+#slive .live.big .vp iframe{height:771px;transform:scale(1.33333)}
+html.pdf #slive .xp{display:none}
+
 
 /* ═════════════ Interface do apresentador ═════════════ */
 #bar{position:fixed;left:0;bottom:0;height:4px;width:100%;z-index:50;background:color-mix(in srgb,var(--ink) 8%,transparent)}
@@ -834,7 +846,7 @@ html.pdf .ui,.pdf .ui{display:none!important}
     </ol>
   </div>
   <div class="live card a fr" style="--i:2">
-    <div class="bar"><span class="dots"><i></i><i></i><i></i></span><span class="url">entre-consultas-sigma.vercel.app</span><a href="https://entre-consultas-sigma.vercel.app/login" target="_blank" rel="noopener">abrir em nova aba ↗</a></div>
+    <div class="bar"><span class="dots"><i></i><i></i><i></i></span><span class="url">entre-consultas-sigma.vercel.app</span><button class="xp" type="button" aria-pressed="false" title="Expandir o protótipo (Esc para voltar)"><span class="on">⤢ Expandir</span><span class="off">⤡ Recolher</span></button><a href="https://entre-consultas-sigma.vercel.app/login" target="_blank" rel="noopener">nova aba ↗</a></div>
     <div class="vp">
       <img class="fallback" src="img/p12.webp" alt="Lista de pacientes no protótipo">
       <iframe src="https://entre-consultas-sigma.vercel.app/login" title="Protótipo navegável do Entre Consultas" loading="lazy"></iframe>
@@ -1333,6 +1345,17 @@ html.pdf .ui,.pdf .ui{display:none!important}
   setCam(camFor(h ? h.i : 0));
   go(h ? h.i : 0, { instant: true, force: true, step: h ? h.s : 0 });
   window.__deck = { go, next, prev, overview, setStep, get cur() { return cur; }, get step() { return step; }, stepsOf: i => stepsOf(slides[i]), N };
+})();
+</script>
+<script id="xp-script">
+(() => {
+  const live = document.querySelector('#slive .live');
+  if (!live) return;
+  const btn = live.querySelector('.xp');
+  const set = on => { live.classList.toggle('big', on); btn.setAttribute('aria-pressed', on ? 'true' : 'false'); };
+  btn.addEventListener('click', e => { e.preventDefault(); e.stopPropagation(); set(!live.classList.contains('big')); btn.blur(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape' && live.classList.contains('big')) { e.preventDefault(); e.stopImmediatePropagation(); set(false); } }, true);
+  document.addEventListener('deck:slide', () => set(false));
 })();
 </script>
 </body>
